@@ -1,0 +1,40 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-rps}",
+            "name": "Debug MonsterBook",
+            "program": "${workspaceFolder:swift-rps}/.build/debug/MonsterBook",
+            "preLaunchTask": "swift: Build Debug MonsterBook"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-rps}",
+            "name": "Release MonsterBook",
+            "program": "${workspaceFolder:swift-rps}/.build/release/MonsterBook",
+            "preLaunchTask": "swift: Build Release MonsterBook"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-rps}",
+            "name": "Debug PlayerBook",
+            "program": "${workspaceFolder:swift-rps}/.build/debug/PlayerBook",
+            "preLaunchTask": "swift: Build Debug PlayerBook"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-rps}",
+            "name": "Release PlayerBook",
+            "program": "${workspaceFolder:swift-rps}/.build/release/PlayerBook",
+            "preLaunchTask": "swift: Build Release PlayerBook"
+        }
+    ]
+}

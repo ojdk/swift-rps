@@ -1,0 +1,43 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "swift",
+			"args": [
+				"build",
+				"--build-tests",
+				"-Xlinker",
+				"-debug:dwarf",
+				"-Xswiftc",
+				"-diagnostic-style=llvm"
+			],
+			"env": {},
+			"cwd": "d:\\repos\\swift-rps",
+			"disableTaskQueue": true,
+			"group": "build",
+			"problemMatcher": [],
+			"label": "swift: Build All Debug",
+			"detail": "swift build --build-tests -Xlinker -debug:dwarf -Xswiftc -diagnostic-style=llvm"
+		},
+		{
+			"type": "swift",
+			"args": [
+				"build",
+				"-c",
+				"release",
+				"--product",
+				"MonsterBook",
+				"-Xswiftc",
+				"-diagnostic-style=llvm"
+			],
+			"env": {},
+			"cwd": "d:\\repos\\swift-rps",
+			"disableTaskQueue": true,
+			"dontTriggerTestDiscovery": true,
+			"group": "build",
+			"problemMatcher": [],
+			"label": "swift: Build Release MonsterBook",
+			"detail": "swift build -c release --product MonsterBook -Xswiftc -diagnostic-style=llvm"
+		}
+	]
+}

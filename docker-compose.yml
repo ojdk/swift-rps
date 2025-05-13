@@ -1,0 +1,38 @@
+services:
+  playerbook:
+    build:
+      context: . # Root directory of your project
+      dockerfile: ./Docker/PlayerBook/PlayerBook.Dockerfile # Or the path to your PlayerBook Dockerfile
+    container_name: playerbook_service
+    # restart: unless-stopped # Optional: restart policy
+    # ports: # Uncomment and map if PlayerBook exposes a port
+    # - "8080:8080" # host:container
+    # environment: # Pass environment variables
+    # - MY_CONFIG_VALUE=some_value
+
+  monsterbook:
+    build:
+      context: .
+      dockerfile: ./Docker/MonsterBook/MonsterBook.Dockerfile # Or the path to your MonsterBook Dockerfile
+    container_name: monsterbook_service
+    # restart: unless-stopped
+    # ports:
+    # - "8081:8080" # Example: mapping to a different host port
+    # environment:
+    # - ANOTHER_CONFIG=another_value
+
+    # Example: Adding a RabbitMQ service (if you were using it)
+    # rabbitmq:
+    #   image: "rabbitmq:3-management"
+    #   container_name: rabbitmq_local
+    #   ports:
+    #     - "5672:5672" # AMQP port
+    #     - "15672:15672" # Management UI port
+    #   environment:
+    #     - RABBITMQ_DEFAULT_USER=user
+    #     - RABBITMQ_DEFAULT_PASS=password
+
+    # You can define networks if needed, though Docker Compose creates a default one
+    # networks:
+    #   app_network:
+    #     driver: bridge
