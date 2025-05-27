@@ -6,10 +6,9 @@ WORKDIR /build
 
 # Copy Package.swift and Package.resolved to leverage Docker layer caching
 COPY Package.swift .
-#COPY Package.resolved . 
 
 # Resolve dependencies first (caches this layer if no changes to manifest)
-#RUN swift package resolve
+RUN swift package resolve
 
 # Copy the rest of the source code
 COPY Sources/ Sources/
@@ -17,7 +16,7 @@ COPY Tests/ Tests/
 
 # Build the specific executable in release mode
 # Adjust --static-swift-stdlib if needed and supported by all dependencies
-RUN swift build -c release --product PlayerBook -Xswiftc -diagnostic-style=llvm
+RUN swift build -c release --product PlayerBook -Xswiftc -diagnostic-style=llvm --static-swift-stdlib
 
 # --- Runtime Stage ---
 FROM ubuntu:jammy 
