@@ -31,6 +31,6 @@ COPY --from=builder /build/.build/release/MonsterBook .
 # COPY --from=builder /build/Resources ./Resources 
 
 # Expose port if your service listens on one (e.g., for HTTP)
-# EXPOSE 8080 
+EXPOSE 8080 
 
 CMD ["./MonsterBook"]

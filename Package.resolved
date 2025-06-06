@@ -1,5 +1,5 @@
 {
-  "originHash" : "ac4345bb385018012ac2a829bbd376c3b7f0dfe7d988ff67423c175a934d4624",
+  "originHash" : "08676faa907487a5cbfb8a1ab739962365699a7884f5f051eb53d55bb7c3de82",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -38,12 +38,39 @@
       }
     },
     {
+      "identity" : "openapikit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mattpolzin/OpenAPIKit.git",
+      "state" : {
+        "revision" : "a75aa4166d916f1cb4a192e928a18f7b6d3516bc",
+        "version" : "3.5.2"
+      }
+    },
+    {
+      "identity" : "openapireflection",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mattpolzin/OpenAPIReflection.git",
+      "state" : {
+        "revision" : "4abc8cfcc66fc34de25a69454f8fa7b9f484dfce",
+        "version" : "2.0.1"
+      }
+    },
+    {
       "identity" : "routing-kit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/routing-kit.git",
       "state" : {
         "revision" : "93f7222c8e195cbad39fafb5a0e4cc85a8def7ea",
         "version" : "4.9.2"
+      }
+    },
+    {
+      "identity" : "sampleable",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mattpolzin/Sampleable.git",
+      "state" : {
+        "revision" : "df44bf1a860481109dcf455e3c6daf0a0f1bc259",
+        "version" : "2.1.0"
       }
     },
     {
@@ -168,8 +195,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-extras.git",
       "state" : {
-        "revision" : "24cb15c9bc05e3e9eb5ebaf3d28517d42537bfb1",
-        "version" : "1.27.1"
+        "revision" : "145db1962f4f33a4ea07a32e751d5217602eea29",
+        "version" : "1.28.0"
       }
     },
     {
@@ -213,8 +240,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-service-context.git",
       "state" : {
-        "revision" : "8946c930cae601452149e45d31d8ddfac973c3c7",
-        "version" : "1.2.0"
+        "revision" : "1983448fefc717a2bc2ebde5490fe99873c5b8a6",
+        "version" : "1.2.1"
       }
     },
     {
@@ -231,8 +258,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-system.git",
       "state" : {
-        "revision" : "a34201439c74b53f0fd71ef11741af7e7caf01e1",
-        "version" : "1.4.2"
+        "revision" : "61e4ca4b81b9e09e2ec863b00c340eb13497dac6",
+        "version" : "1.5.0"
       }
     },
     {
@@ -245,12 +272,39 @@
       }
     },
     {
+      "identity" : "vaporopenapi",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mattpolzin/VaporOpenAPI.git",
+      "state" : {
+        "revision" : "026e8b6f5a7703ee85f64da33301bd3cdb7d03af",
+        "version" : "0.7.0"
+      }
+    },
+    {
+      "identity" : "vaportypedroutes",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mattpolzin/VaporTypedRoutes.git",
+      "state" : {
+        "revision" : "f28103ae5a8124dfb8b2386460e7ff8b0dd9aef7",
+        "version" : "0.10.0"
+      }
+    },
+    {
       "identity" : "websocket-kit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/websocket-kit.git",
       "state" : {
         "revision" : "8666c92dbbb3c8eefc8008c9c8dcf50bfd302167",
         "version" : "2.16.1"
+      }
+    },
+    {
+      "identity" : "yams",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jpsim/Yams.git",
+      "state" : {
+        "revision" : "3d6871d5b4a5cd519adf233fbb576e0a2af71c17",
+        "version" : "5.4.0"
       }
     }
   ],

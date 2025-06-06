@@ -7,7 +7,9 @@ let package = Package(
     name: "rps",
     dependencies: [
         // 💧 A server-side Swift web framework.
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0")
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.86.0"),
+        .package(url: "https://github.com/mattpolzin/VaporOpenAPI.git", from: "0.7.0"),  // OpenAPI support
+        .package(url: "https://github.com/jpsim/Yams.git", from: "5.0.0"),
     ],
     targets: [
         .target(
@@ -18,7 +20,10 @@ let package = Package(
         .target(
             name: "MonsterCore",
             dependencies: [
-                "Core"
+                "Core",
+                .product(name: "Vapor", package: "vapor"),
+                .product(name: "VaporOpenAPI", package: "VaporOpenAPI"),
+                .product(name: "Yams", package: "Yams"),
             ],
             path: "Sources/MonsterCore"
         ),
