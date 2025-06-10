@@ -35,6 +35,24 @@
             "name": "Release PlayerBook",
             "program": "${workspaceFolder:swift-rps}/.build/release/PlayerBook",
             "preLaunchTask": "swift: Build Release PlayerBook"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-rps}",
+            "name": "Debug CoreBook",
+            "program": "${workspaceFolder:swift-rps}/.build/debug/CoreBook",
+            "preLaunchTask": "swift: Build Debug CoreBook"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-rps}",
+            "name": "Release CoreBook",
+            "program": "${workspaceFolder:swift-rps}/.build/release/CoreBook",
+            "preLaunchTask": "swift: Build Release CoreBook"
         }
     ]
 }

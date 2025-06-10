@@ -4,6 +4,6 @@ import Vapor
 func routes(_ app: Application) throws {
     let apiController = MonsterApiController(app: app)
 
-    app.get("die6", use: apiController.die6)
-
+    // Changed to POST to accept a JSON body, and endpoint name changed
+    app.post("monster", use: apiController.getMonster)
 }

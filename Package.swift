@@ -14,7 +14,10 @@ let package = Package(
     targets: [
         .target(
             name: "Core",
-            dependencies: [],
+            dependencies: [
+                .product(name: "Vapor", package: "vapor"),
+                .product(name: "VaporOpenAPI", package: "VaporOpenAPI"),
+                .product(name: "Yams", package: "Yams"),],
             path: "Sources/Core"
         ),
         .target(
@@ -51,6 +54,13 @@ let package = Package(
                 "MonsterCore",
             ],
             path: "Sources/MonsterBook"
+        ),
+        .executableTarget(
+            name: "CoreBook",
+            dependencies: [
+                "Core"
+            ],
+            path: "Sources/CoreBook"
         ),
         .testTarget(
             name: "CoreTests",

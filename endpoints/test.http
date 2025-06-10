@@ -1,0 +1,13 @@
+POST http://172.26.119.7:8081/monster
+Content-Type: application/json
+
+{
+  "name": "",
+  "type": "",
+  "requestedLevel": 12
+}
+
+###
+
+GET http://172.26.119.7:8080/die6
+

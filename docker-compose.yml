@@ -1,4 +1,17 @@
 services:
+  corebook:
+    build:
+      context: . # Root directory of your project
+      dockerfile: ./Docker/CoreBook/CoreBook.Dockerfile # Or the path to your CoreBook Dockerfile
+    container_name: corebook_service
+    # restart: unless-stopped # Optional: restart policy
+    ports:
+      - "8080:8080" # host:container
+    networks:
+      - app_network
+    # environment: # Pass environment variables
+    # - MY_CONFIG_VALUE=some_value
+
   playerbook:
     build:
       context: . # Root directory of your project
@@ -7,6 +20,8 @@ services:
     # restart: unless-stopped # Optional: restart policy
     ports:
       - "8082:8080" # host:container
+    networks:
+      - app_network
     # environment: # Pass environment variables
     # - MY_CONFIG_VALUE=some_value
 
@@ -18,8 +33,13 @@ services:
     # restart: unless-stopped
     ports:
       - "8081:8080" # Maps port 8081 on your host to port 8080 in the container
-    # environment:
+    environment:
+      - COREBOOK_URL=http://corebook:8080
     # - ANOTHER_CONFIG=another_value
+    networks:
+      - app_network
+    depends_on:
+      - corebook
 
     # Example: Adding a RabbitMQ service (if you were using it)
     # rabbitmq:
@@ -33,6 +53,6 @@ services:
     #     - RABBITMQ_DEFAULT_PASS=password
 
     # You can define networks if needed, though Docker Compose creates a default one
-    # networks:
-    #   app_network:
-    #     driver: bridge
+networks:
+  app_network:
+    driver: bridge
