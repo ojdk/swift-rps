@@ -8,7 +8,6 @@ let package = Package(
     dependencies: [
         // 💧 A server-side Swift web framework.
         .package(url: "https://github.com/vapor/vapor.git", from: "4.86.0"),
-        .package(url: "https://github.com/mattpolzin/VaporOpenAPI.git", from: "0.7.0"),  // OpenAPI support
         .package(url: "https://github.com/jpsim/Yams.git", from: "5.0.0"),
     ],
     targets: [
@@ -16,8 +15,8 @@ let package = Package(
             name: "Core",
             dependencies: [
                 .product(name: "Vapor", package: "vapor"),
-                .product(name: "VaporOpenAPI", package: "VaporOpenAPI"),
-                .product(name: "Yams", package: "Yams"),],
+                .product(name: "Yams", package: "Yams"),
+            ],
             path: "Sources/Core"
         ),
         .target(
@@ -25,7 +24,6 @@ let package = Package(
             dependencies: [
                 "Core",
                 .product(name: "Vapor", package: "vapor"),
-                .product(name: "VaporOpenAPI", package: "VaporOpenAPI"),
                 .product(name: "Yams", package: "Yams"),
             ],
             path: "Sources/MonsterCore"

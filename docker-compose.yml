@@ -34,13 +34,13 @@ services:
     ports:
       - "8081:8080" # Maps port 8081 on your host to port 8080 in the container
     environment:
-      - COREBOOK_URL=http://corebook:8080
+      - COREBOOK_HOSTNAME=corebook
+      - COREBOOK_PORT=8080
     # - ANOTHER_CONFIG=another_value
     networks:
       - app_network
     depends_on:
       - corebook
-
     # Example: Adding a RabbitMQ service (if you were using it)
     # rabbitmq:
     #   image: "rabbitmq:3-management"

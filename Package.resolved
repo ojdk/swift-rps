@@ -1,5 +1,5 @@
 {
-  "originHash" : "d56bdf63f41c2849aa5b7ef864e85d6eef71b7479833c8b349fdb6d4a4ede1dc",
+  "originHash" : "f86146c4610ca3eee59ff28b39a2ebade0b8d928db0eb37626be9aec6bcf8be6",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -38,39 +38,12 @@
       }
     },
     {
-      "identity" : "openapikit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/mattpolzin/OpenAPIKit.git",
-      "state" : {
-        "revision" : "a75aa4166d916f1cb4a192e928a18f7b6d3516bc",
-        "version" : "3.5.2"
-      }
-    },
-    {
-      "identity" : "openapireflection",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/mattpolzin/OpenAPIReflection.git",
-      "state" : {
-        "revision" : "4abc8cfcc66fc34de25a69454f8fa7b9f484dfce",
-        "version" : "2.0.1"
-      }
-    },
-    {
       "identity" : "routing-kit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/routing-kit.git",
       "state" : {
         "revision" : "93f7222c8e195cbad39fafb5a0e4cc85a8def7ea",
         "version" : "4.9.2"
-      }
-    },
-    {
-      "identity" : "sampleable",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/mattpolzin/Sampleable.git",
-      "state" : {
-        "revision" : "df44bf1a860481109dcf455e3c6daf0a0f1bc259",
-        "version" : "2.1.0"
       }
     },
     {
@@ -269,24 +242,6 @@
       "state" : {
         "revision" : "4014016aad591a120f244f9b9e8a57252b7e62b4",
         "version" : "4.115.0"
-      }
-    },
-    {
-      "identity" : "vaporopenapi",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/mattpolzin/VaporOpenAPI.git",
-      "state" : {
-        "revision" : "026e8b6f5a7703ee85f64da33301bd3cdb7d03af",
-        "version" : "0.7.0"
-      }
-    },
-    {
-      "identity" : "vaportypedroutes",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/mattpolzin/VaporTypedRoutes.git",
-      "state" : {
-        "revision" : "f28103ae5a8124dfb8b2386460e7ff8b0dd9aef7",
-        "version" : "0.10.0"
       }
     },
     {

@@ -11,16 +11,22 @@ public enum MonsterCoreService {
     /// It blocks the calling thread until the server is shut down.
     public static func run() throws {
         // Detect the environment (e.g., development, production) from command-line arguments or OS environment variables.
-        var env = try Environment.detect()
+        var env: Environment = try Environment.detect()
 
         // Bootstrap the logging system. It's good practice to do this early.
         // Vapor's Application will also do this if not already initialized.
         try LoggingSystem.bootstrap(from: &env)
 
-        let app = Application(env)
+        let app: Application = Application(env)
         defer { app.shutdown() }  // Ensures the application cleans up resources on exit.
 
-        try configure(app)  // Apply configurations (routes, middleware, etc.)
+        let corebookHostname: String =
+            ProcessInfo.processInfo.environment["COREBOOK_HOSTNAME"] ?? "localhost"
+        let corebookPort: String = ProcessInfo.processInfo.environment["COREBOOK_PORT"] ?? "8080"
+
+        let apiController: MonsterApiController = MonsterApiController(
+            app: app, corebookHostname: corebookHostname, corebookPort: Int(corebookPort)!)
+        try configure(app, apiController)  // Apply configurations (routes, middleware, etc.)
 
         app.logger.info("MonsterCore service starting up...")
         app.logger.info(

@@ -7,6 +7,8 @@ internal func configure(_ app: Application) throws {
     // This is needed to serve openapi.json if you place it in Public/
     app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
 
+    // get enviroment variable
+
     app.http.server.configuration.hostname = "0.0.0.0"
     app.http.server.configuration.port = 8080
 
